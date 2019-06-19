@@ -10,4 +10,12 @@ class FooController extends Controller
     {
         return 'Foo1!!';
     }
+
+    public function foo2()
+    {
+        return view('foo.foo2',[
+            'title' => 'foo2',
+            'body'  => 'My First Laravel.'
+        ]);
+    }
 }
