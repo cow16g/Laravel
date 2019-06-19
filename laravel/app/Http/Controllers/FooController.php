@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class FooController extends Controller
 {
@@ -16,6 +17,14 @@ class FooController extends Controller
         return view('foo.foo2',[
             'title' => 'foo2',
             'body'  => 'My First Laravel.'
+        ]);
+    }
+
+    public function foo3()
+    {
+        $user = User::find(1);
+        return view('foo.foo3',[
+            'user' => $user
         ]);
     }
 }
