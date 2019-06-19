@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('foo', function() {
     return 'Foo!';
 });
+
+Route::get('foo/foo1','FooController@foo1');
