@@ -12,9 +12,10 @@
             {{ __('Edit') }}
         </a>
         {{-- @TODO後ほど置き換え --}}
-        <a href="#" class="btn btn-danger">
-            {{ __('Delete') }}
-        </a>
+        @component('components.btn-del')
+            @slot('table', 'users')
+            @slot('id', $user->id)
+        @endcomponent
     </div>
 
     {{-- ユーザ1件の情報 --}}
